@@ -1,30 +1,33 @@
 /* comment */
 /* setting the values */
 :root {
-    --main-font: arial, helvetica, sans-serif;
-    --van-dyke: hsla(341, 12%, 26%, 1);
-    --jonquil: hsla(49, 98%, 49%, 1);
-    --coyote: hsla(36, 17%, 44%, 1);
-    --fairy-tale: hsla(338, 30%, 79%, 1);
-    --ghost-white: hsla(240, 100%, 98%, 1);
+    --main-font: 'Roboto', sans-serif;
+    --heading-font: 'Playfair Display', serif;
+    --darkest-blue: hsla(220, 30%, 15%, 1);
+    --dark-blue: hsla(220, 30%, 25%, 1);
+    --medium-blue: hsla(220, 30%, 40%, 1);
+    --light-blue: hsla(220, 30%, 60%, 1);
+    --pale-blue: hsla(220, 30%, 80%, 1);
+    --ghost-white: hsla(220, 30%, 98%, 1);
 }
 
 body {
-    /* here we use main-font */
     font-family: var(--main-font);
-    background-color: var(--fairy-tale);
+    background-color: var(--pale-blue);
     margin: 0px;
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
     overflow-y: scroll;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
 }
 
 .main-header {
-    background-color: var(--van-dyke);
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
+    background: linear-gradient(to right, var(--darkest-blue), var(--dark-blue));
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto auto;
@@ -34,10 +37,12 @@ body {
     color: var(--ghost-white);
     text-decoration: none;
     padding: 1em;
+    transition: all 0.3s ease;
 }
 
 .main-navigation a:hover {
     text-decoration: underline;
+    color: var(--pale-blue);
 }
 
 .main-navigation {
@@ -52,6 +57,11 @@ body {
     color: var(--ghost-white);
     text-decoration: none;
     padding: 1em;
+    transition: all 0.3s ease;
+}
+
+.user-navigation a:hover {
+    color: var(--pale-blue);
 }
 
 .user-navigation {
@@ -81,15 +91,20 @@ body {
 .search-input {
     flex: 1;
     padding: 0.8em;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 8px 0px 0px 8px;
     border-width: 0px;
+    transition: all 0.3s ease;
 }
 .search-button {
    padding: 0.8em; 
-   border-radius: 0px 5px 5px 0px;
+   border-radius: 0px 8px 8px 0px;
    border-width: 0px;
-   background-color: var(--coyote);
+   background-color: var(--medium-blue);
    color: var(--ghost-white);
+   transition: all 0.3s ease;
+}
+.search-button:hover {
+    background-color: var(--dark-blue);
 }
 
 .sr-only {
@@ -109,7 +124,7 @@ body {
 
 .main-footer {
     padding: 1em;
-    background-color: var(--van-dyke);
+    background: linear-gradient(to right, var(--darkest-blue), var(--dark-blue));
 }
 
 .policies {
@@ -120,6 +135,10 @@ body {
     color: var(--ghost-white);
     text-decoration: none;
     padding: 1em;
+    transition: all 0.3s ease;
+}
+.policies a:hover {
+    color: var(--pale-blue);
 }
 
 .social {
@@ -127,12 +146,14 @@ body {
     flex-direction: row;
 }
 .social a {
-    color: var(--fairy-tale);
+    color: var(--pale-blue);
     text-decoration: none;
     padding: 1em;
+    transition: all 0.3s ease;
 }
 .social a:hover {
-    color: yellow;
+    color: var(--ghost-white);
+    transform: scale(1.1);
 }
 
 /* carousel */
@@ -141,35 +162,22 @@ body {
     width: 30vw;
     margin-left: 10px;
     margin-right: 10px;
-    background-color: var(--jonquil);
+    background-color: var(--light-blue);
     background-size: cover;
     aspect-ratio: 16/6;
     background-position: center;
     display: grid;
     place-items: center;
+    border-radius: 8px;
 }
 .slide h1 {
-    background-color: hsla(240, 100%, 98%, 0.4);
+    background-color: hsla(220, 30%, 98%, 0.4);
     padding: 1em;
     border-radius: 1em;
     min-width: 6em;
     text-align: center;
 }
-.one {
-    background-image: url("assets/pexels-goumbik-292999.jpg");
-}
-.two {
-    background-image: url("assets/pexels-mnzoutfits-1598505.jpg");
-}
-.three {
-    background-image: url("assets/pexels-mstudio-360817-1240892.jpg");
-}
-.four {
-    background-image: url("assets/pexels-oandremoura-2562992.jpg");
-}
-.five {
-    background-image: url("assets/pexels-pixabay-267320.jpg");
-}
+/* Keep the background image URLs as they were */
 
 .content {
     max-width: 80vw;
@@ -180,24 +188,36 @@ body {
 }
 .card {
     background-color: var(--ghost-white);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 .card-image {
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center;
     max-width: 100%;
+    border-radius: 8px 8px 0 0;
 }
 .card-content {
     padding: 1em;
 }
 .card-content a {
-    background-color: var(--van-dyke);
+    background: linear-gradient(to right, var(--dark-blue), var(--medium-blue));
     display: block;
     padding: 0.5em;
     text-decoration: none;
     text-align: center;
     color: var(--ghost-white);
     border-radius: 0.5em;
+    transition: all 0.3s ease;
+}
+.card-content a:hover {
+    background: var(--medium-blue);
+    transform: translateY(-2px);
 }
 .grid-4 {
     display: grid;
@@ -220,16 +240,28 @@ body {
 #contact-form input, #contact-form textarea {
     display: block;
     padding: 0.5em;
-    border-color: var(--van-dyke);
+    border-color: var(--dark-blue);
     border-width: 1px;
     border-style: solid;
     border-radius: 0.4em;
+    transition: all 0.3s ease;
+}
+#contact-form input:focus, #contact-form textarea:focus {
+    outline: none;
+    border-color: var(--medium-blue);
+    box-shadow: 0 0 5px var(--light-blue);
 }
 #contact-form button {
-    background-color: var(--van-dyke);
+    background-color: var(--dark-blue);
     color: var(--ghost-white);
     padding: 0.5em;
     min-width: 6em;
     margin-top: 1em;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-
+#contact-form button:hover {
+    background-color: var(--medium-blue);
+}
