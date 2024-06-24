@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--ghost-white);
     border-radius: 8px;
     transition: all 0.3s ease;
-    overflow: hidden; /* This ensures the image doesn't spill out */
+    min-height: 400px; /* Added this line */
 }
 .card:hover {
     transform: translateY(-5px);
@@ -200,17 +200,18 @@ h1, h2, h3, h4, h5, h6 {
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center;
-    width: 100%; /* Ensure the image takes full width of the card */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove any extra space below the image */
-}
-.card-image {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
     border: 5px solid red;
     min-height: 200px;
+    position: relative;
+    z-index: 1;
+    background-color: yellow;
 }
 .card-content {
     padding: 1em;
-    background-color: var(--ghost-white); /* Ensure text has a background */
+    background-color: var(--ghost-white);
 }
 .card-content a {
     background: linear-gradient(to right, var(--dark-blue), var(--medium-blue));
@@ -228,8 +229,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .grid-4 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
     column-gap: 1em;
+    row-gap: 1em; /* Added this line */
 }
 .grid-2 {
     display: grid;
@@ -272,4 +274,3 @@ h1, h2, h3, h4, h5, h6 {
 #contact-form button:hover {
     background-color: var(--medium-blue);
 }
-
