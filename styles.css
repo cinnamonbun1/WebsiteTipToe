@@ -177,7 +177,22 @@ h1, h2, h3, h4, h5, h6 {
     min-width: 6em;
     text-align: center;
 }
-/* Keep the background image URLs as they were */
+}
+.one {
+    background-image: url("assets/pexels-goumbik-292999.jpg");
+}
+.two {
+    background-image: url("assets/pexels-mnzoutfits-1598505.jpg");
+}
+.three {
+    background-image: url("assets/pexels-mstudio-360817-1240892.jpg");
+}
+.four {
+    background-image: url("assets/pexels-oandremoura-2562992.jpg");
+}
+.five {
+    background-image: url("assets/pexels-pixabay-267320.jpg");
+}
 
 .content {
     max-width: 80vw;
