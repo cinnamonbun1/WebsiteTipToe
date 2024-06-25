@@ -158,19 +158,22 @@ body {
     min-width: 6em;
     text-align: center;
 }
-.one {
+.Corporate shoes {
     background-image: url("assets/pexels-goumbik-292999.jpg");
 }
-.two {
+.Sneakers {
     background-image: url("assets/pexels-mnzoutfits-1598505.jpg");
 }
-.three {
+.Casual {
     background-image: url("assets/pexels-mstudio-360817-1240892.jpg");
 }
-.four {
+.Boots {
     background-image: url("assets/pexels-oandremoura-2562992.jpg");
 }
-.five {
+.Formal {
+    background-image: url("assets/pexels-pixabay-267320.jpg");
+}
+.Formal {
     background-image: url("assets/pexels-pixabay-267320.jpg");
 }
 
