@@ -1,48 +1,46 @@
 /* comment */
 /* setting the values */
 :root {
-    --main-font: 'Roboto', sans-serif;
-    --heading-font: 'Playfair Display', serif;
-    --darkest-blue: hsla(220, 30%, 15%, 1);
-    --dark-blue: hsla(220, 30%, 25%, 1);
-    --medium-blue: hsla(220, 30%, 40%, 1);
-    --light-blue: hsla(220, 30%, 60%, 1);
-    --pale-blue: hsla(220, 30%, 80%, 1);
-    --ghost-white: hsla(220, 30%, 98%, 1);
+    --main-font: arial, helvetica, sans-serif;
+    --dark-leather: hsl(28, 40%, 20%);
+    --medium-leather: hsl(28, 40%, 40%);
+    --light-leather: hsl(28, 40%, 60%);
+    --dark-gold: hsl(43, 60%, 40%);
+    --medium-gold: hsl(43, 60%, 60%);
+    --light-gold: hsl(43, 60%, 80%);
+    --off-white: hsl(43, 30%, 95%);
 }
 
 body {
+    /* here we use main-font */
     font-family: var(--main-font);
-    background-color: var(--pale-blue);
+    background-color: var(--light-gold);
     margin: 0px;
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
     overflow-y: scroll;
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
 }
 
 .main-header {
-    background: linear-gradient(to right, var(--darkest-blue), var(--dark-blue));
+    background-color: var(--dark-leather);
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto auto;
 }
 
 .main-navigation a {
-    color: var(--ghost-white);
+    color: var(--light-gold);
     text-decoration: none;
     padding: 1em;
-    transition: all 0.3s ease;
 }
 
 .main-navigation a:hover {
     text-decoration: underline;
-    color: var(--pale-blue);
+    color: var(--medium-gold);
 }
 
 .main-navigation {
@@ -54,14 +52,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .user-navigation a {
-    color: var(--ghost-white);
+    color: var(--light-gold);
     text-decoration: none;
     padding: 1em;
-    transition: all 0.3s ease;
-}
-
-.user-navigation a:hover {
-    color: var(--pale-blue);
 }
 
 .user-navigation {
@@ -91,20 +84,15 @@ h1, h2, h3, h4, h5, h6 {
 .search-input {
     flex: 1;
     padding: 0.8em;
-    border-radius: 8px 0px 0px 8px;
+    border-radius: 5px 0px 0px 5px;
     border-width: 0px;
-    transition: all 0.3s ease;
 }
 .search-button {
    padding: 0.8em; 
-   border-radius: 0px 8px 8px 0px;
+   border-radius: 0px 5px 5px 0px;
    border-width: 0px;
-   background-color: var(--medium-blue);
-   color: var(--ghost-white);
-   transition: all 0.3s ease;
-}
-.search-button:hover {
-    background-color: var(--dark-blue);
+   background-color: var(--medium-leather);
+   color: var(--light-gold);
 }
 
 .sr-only {
@@ -124,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-footer {
     padding: 1em;
-    background: linear-gradient(to right, var(--darkest-blue), var(--dark-blue));
+    background-color: var(--dark-leather);
 }
 
 .policies {
@@ -132,13 +120,9 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
 }
 .policies a {
-    color: var(--ghost-white);
+    color: var(--light-gold);
     text-decoration: none;
     padding: 1em;
-    transition: all 0.3s ease;
-}
-.policies a:hover {
-    color: var(--pale-blue);
 }
 
 .social {
@@ -146,14 +130,12 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
 }
 .social a {
-    color: var(--pale-blue);
+    color: var(--medium-gold);
     text-decoration: none;
     padding: 1em;
-    transition: all 0.3s ease;
 }
 .social a:hover {
-    color: var(--ghost-white);
-    transform: scale(1.1);
+    color: var(--light-gold);
 }
 
 /* carousel */
@@ -162,21 +144,19 @@ h1, h2, h3, h4, h5, h6 {
     width: 30vw;
     margin-left: 10px;
     margin-right: 10px;
-    background-color: var(--light-blue);
+    background-color: var(--medium-gold);
     background-size: cover;
     aspect-ratio: 16/6;
     background-position: center;
     display: grid;
     place-items: center;
-    border-radius: 8px;
 }
 .slide h1 {
-    background-color: hsla(220, 30%, 98%, 0.4);
+    background-color: hsla(43, 30%, 95%, 0.4);
     padding: 1em;
     border-radius: 1em;
     min-width: 6em;
     text-align: center;
-}
 }
 .one {
     background-image: url("assets/pexels-goumbik-292999.jpg");
@@ -202,51 +182,30 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 3em;
 }
 .card {
-    background-color: var(--ghost-white);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    min-height: 400px; /* Added this line */
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: var(--off-white);
 }
 .card-image {
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center;
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    border: 5px solid red;
-    min-height: 200px;
-    position: relative;
-    z-index: 1;
-    background-color: yellow;
+    max-width: 100%;
 }
 .card-content {
     padding: 1em;
-    background-color: var(--ghost-white);
 }
 .card-content a {
-    background: linear-gradient(to right, var(--dark-blue), var(--medium-blue));
+    background-color: var(--dark-leather);
     display: block;
     padding: 0.5em;
     text-decoration: none;
     text-align: center;
-    color: var(--ghost-white);
+    color: var(--light-gold);
     border-radius: 0.5em;
-    transition: all 0.3s ease;
-}
-.card-content a:hover {
-    background: var(--medium-blue);
-    transform: translateY(-2px);
 }
 .grid-4 {
     display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 1em;
-    row-gap: 1em; /* Added this line */
 }
 .grid-2 {
     display: grid;
@@ -264,28 +223,15 @@ h1, h2, h3, h4, h5, h6 {
 #contact-form input, #contact-form textarea {
     display: block;
     padding: 0.5em;
-    border-color: var(--dark-blue);
+    border-color: var(--medium-leather);
     border-width: 1px;
     border-style: solid;
     border-radius: 0.4em;
-    transition: all 0.3s ease;
-}
-#contact-form input:focus, #contact-form textarea:focus {
-    outline: none;
-    border-color: var(--medium-blue);
-    box-shadow: 0 0 5px var(--light-blue);
 }
 #contact-form button {
-    background-color: var(--dark-blue);
-    color: var(--ghost-white);
+    background-color: var(--dark-leather);
+    color: var(--light-gold);
     padding: 0.5em;
     min-width: 6em;
     margin-top: 1em;
-    border: none;
-    border-radius: 0.4em;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-#contact-form button:hover {
-    background-color: var(--medium-blue);
 }
