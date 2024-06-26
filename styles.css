@@ -255,8 +255,8 @@ body {
 }
 
 .about-image {
-    width: 100%; /* Make the image take the full width of its container */
-    height: auto; /* Maintain the aspect ratio */
-    border-radius: 5px; /* Optional: add rounded corners */
-    margin-bottom: 1rem; /* Add space below the image */
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
 }
